@@ -1,0 +1,10 @@
+<?xml version="1.0"?>
+<launch>
+
+  <include file="$(find racecar)/launch/teleop.launch"/>
+
+  <node pkg="wall_following" name="second_pid_error_node" type="second_pid_error.py" output="screen"/> 
+  <node pkg="wall_following" name="second_control_node" type="second_control.py" output="screen"/>
+  <node pkg="wall_following" name="second_dead_mans_switch" type="second_dead_mans_switch.py" output="screen"/>
+
+</launch>
